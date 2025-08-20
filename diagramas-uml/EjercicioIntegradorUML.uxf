@@ -1,0 +1,70 @@
+<diagram program="umletino" version="15.1"><zoom_level>9</zoom_level><element><id>UMLClass</id><coordinates><x>414</x><y>81</y><w>189</w><h>171</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+CarritoDeCompra
+--
+-id: String
+--
++Carrito(String, String, String)
++agregarProducto(Item): void
+</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>747</x><y>333</y><w>189</w><h>171</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Producto
+--
+-id: String
+-precio: double
+--
++Producto()</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>423</x><y>351</y><w>189</w><h>171</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+MedioPago
+--
+-id: String
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>747</x><y>90</y><w>189</w><h>171</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Item
+--
+-cantidad: int
+--
++Item(String, int)</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>333</x><y>153</y><w>99</w><h>45</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+- carritos</panel_attributes><additional_attributes>90;20;10;20</additional_attributes></element><element><id>Relation</id><coordinates><x>837</x><y>252</y><w>81</w><h>99</h></coordinates><panel_attributes>lt=&lt;-
+m1=1
+- producto</panel_attributes><additional_attributes>10;90;10;10</additional_attributes></element><element><id>UMLClass</id><coordinates><x>81</x><y>81</y><w>261</w><h>207</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+SitioWeb
+--
+
+--
++SitioWeb()
++agregarCarritoVendido(CarritoDeCompra): void
++mostrarPreciosDeCarritosVendidos(): void
++idDelCarritoMasCaro():String
++nroCuotasPromedio():int</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>594</x><y>144</y><w>171</w><h>45</h></coordinates><panel_attributes>lt=&lt;-
+m1=0..n
+- productos</panel_attributes><additional_attributes>170;20;10;20</additional_attributes></element><element><id>UMLClass</id><coordinates><x>0</x><y>351</y><w>270</w><h>171</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Fecha
+--
+-dia: int
+-mes: int
+-anio: int
+--
++Fecha(int, int, int)
++diasTranscurridosEntreFechas(Fecha, Fecha) : int</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>414</x><y>612</y><w>225</w><h>171</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+Efectivo
+--
+-esConsumidorFinal: boolean
+-DESCUENTO_GENERAL: double = 0.10
+-DESCUENTO_CONSUMIDOR: double = 0.15
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>144</x><y>612</y><w>234</w><h>171</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+TransferenciaBancaria
+--
+-cbu: String
+-RECARGO_BASE: double = 0.05
+-RECARGO_ADICIONAL: double = 0.05
+-DIAS_RETRASADOS: int = 10
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>UMLClass</id><coordinates><x>666</x><y>612</y><w>225</w><h>171</h></coordinates><panel_attributes>&lt;&lt;Class&gt;&gt;
+TarjetaCredito
+--
+-cantidadCuotas: int
+-RECARGO_POR_CUOTA: double = 0.15
+--</panel_attributes><additional_attributes></additional_attributes></element><element><id>Relation</id><coordinates><x>504</x><y>243</y><w>90</w><h>126</h></coordinates><panel_attributes>lt=&lt;-
+-medioPago
+m1=1</panel_attributes><additional_attributes>10;120;10;10</additional_attributes></element><element><id>Relation</id><coordinates><x>513</x><y>513</y><w>279</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;40;290;40;290;110</additional_attributes></element><element><id>Relation</id><coordinates><x>513</x><y>513</y><w>27</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>10;10;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>261</x><y>513</y><w>279</w><h>117</h></coordinates><panel_attributes>lt=&lt;&lt;-</panel_attributes><additional_attributes>290;10;290;40;10;40;10;110</additional_attributes></element><element><id>Relation</id><coordinates><x>261</x><y>441</y><w>180</w><h>45</h></coordinates><panel_attributes>lt=&lt;-
+-fecha
+m1=1</panel_attributes><additional_attributes>10;20;180;20</additional_attributes></element><element><id>Relation</id><coordinates><x>45</x><y>45</y><w>486</w><h>324</h></coordinates><panel_attributes>lt=&lt;-
+-fecha
+m1=1</panel_attributes><additional_attributes>10;340;10;20;520;20;520;40</additional_attributes></element><element><id>Relation</id><coordinates><x>261</x><y>243</y><w>189</w><h>90</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>190;10;190;80;10;80;10;50</additional_attributes></element><element><id>Relation</id><coordinates><x>594</x><y>207</y><w>171</w><h>27</h></coordinates><panel_attributes>lt=&lt;..</panel_attributes><additional_attributes>170;10;10;10</additional_attributes></element></diagram>

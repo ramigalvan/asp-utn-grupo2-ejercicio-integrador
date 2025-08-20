@@ -1,6 +1,11 @@
 package org.rami;
 
 
+import org.rami.util.Fecha;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -20,6 +25,7 @@ public class Main {
                 itemsCarrito01,
                 new Efectivo(new Fecha(10, 11, 2022), false),
                 new Fecha(10, 11, 2022));
+
 
         // Precio bruto = 270, como es consumidor final = 229.5
         List<Item> itemsCarrito02 = new ArrayList<Item>();
