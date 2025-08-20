@@ -1,4 +1,5 @@
 package org.rami;
+
 import org.rami.util.Fecha;
 
 public class TransferenciaBancaria extends MedioPago {
@@ -14,7 +15,7 @@ public class TransferenciaBancaria extends MedioPago {
 
     @Override
     public double totalConReglas(double precioBruto, Fecha fechaCompra) {
-        int dias = Fecha.diasTranscurridosEntreFechas(fechaCompra, fechaPago);
+        int dias = Fecha.diasTranscurridosEntreFechas(fechaCompra, getFechaPago());
         double recargo = RECARGO_BASE + (dias > DIAS_RETRASADOS ? RECARGO_ADICIONAL : 0.0);
         return precioBruto * (1 + recargo);
     }

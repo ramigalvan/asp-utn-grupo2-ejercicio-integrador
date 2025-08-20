@@ -1,4 +1,5 @@
 package org.rami;
+
 import org.rami.util.Fecha;
 
 public class Efectivo extends MedioPago {

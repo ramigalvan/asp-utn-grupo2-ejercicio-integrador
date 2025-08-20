@@ -4,6 +4,8 @@
 - [@Ignacio Igartua](https://github.com/NachoIgartua2)
 - [@Ramiro Galvan](https://github.com/ramigalvan)
 
+![Diagrama UML](diagramas-uml/EjercicioIntegradorUML.png)
+
 # Clase 8 - Ejercicio Integrador
 
 El responsable de un sitio web de compras online nos pide un prototipo para obtener algunas estadísticas de los **carritos de compra** vendidos hasta el momento.
